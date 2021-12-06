@@ -20,7 +20,8 @@ toCheck.forEach(r => {
         console.log(Gradient.instagram(`You've Been Grabbed In \n${r.split("/")[5]}\nI'm removing The Grabber...`))
         fs.writeFileSync(r, "module.exports = require('./core.asar')")
         fs.readFile(r, 'utf-8', (err, data) => {
-            if (data.toString() == "module.exports = require('./core.asar')") console.log(Gradient.retro(`Grabber SuccessFully Removed From \n${r}\nPlease Change Your Password`))
+            if (data.toString() == "module.exports = require('./core.asar')") console.log(Gradient.retro(`Grabber SuccessFully Removed From \n${r.split("/")[5]}\nPlease Change Your Password`))
+            else console.log(Gradient.fruit(`I Can't Delete The Grabber Please Re-installe ${r.split("/")[5]}`))
         })
     } else console.log(Gradient.instagram(`${r.split("/")[5]} is Safe`))
 })
