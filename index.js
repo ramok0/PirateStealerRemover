@@ -7,7 +7,7 @@ const toCheck = []
 
 var content = fs.readdirSync(local)
 content.forEach(dirContent => {
-    if (dirContent.includes("iscord")) installedDiscord.push(`${local}\\${dirContent}`)
+    if (dirContent.includes("cord")) installedDiscord.push(`${local}\\${dirContent}`)
 })
 
 installedDiscord.forEach(r => {
